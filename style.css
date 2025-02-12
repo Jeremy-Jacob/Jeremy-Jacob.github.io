@@ -30,7 +30,7 @@ body {
 
  h2 {
   color: #ff6b6b; /* A lighter shade of red for contrast */
-  font-size: 1.5rem;
+  font-size: 0.5rem;
   margin-top: 0; /* Remove default margin */
   margin-bottom: 20px; /* Add spacing below the h2 */
 }
