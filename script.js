@@ -5,7 +5,7 @@ function redirectToYes() {
   
   // Function to redirect to the next "No" page
   function redirectToNo() {
-    const currentPage = window.location.pathname.split('/').pop();
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html'; // Fallback to 'index.html'
     switch (currentPage) {
       case 'index.html':
         window.location.href = 'no-page.html';
@@ -20,6 +20,8 @@ function redirectToYes() {
         window.location.href = 'no-page-final.html';
         break;
       default:
+        // If the user is on an unexpected page, redirect to the first "No" page
+        window.location.href = 'no-page.html';
         break;
     }
   }
