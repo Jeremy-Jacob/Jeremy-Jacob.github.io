@@ -5,11 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yay!</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Balloon styles and animations */
+    .balloon {
+      position: absolute;
+      bottom: -10%;
+      width: 60px;
+      height: 80px;
+      background-color: #ff6b6b;
+      border-radius: 50%;
+      animation: floatUp 8s infinite ease-in;
+    }
+
+    .balloon::before {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 50px;
+      background-color: #333;
+    }
+
+    .balloon:nth-child(2) {
+      left: 20%;
+      background-color: #6bff6b;
+      animation-duration: 10s;
+    }
+
+    .balloon:nth-child(3) {
+      left: 40%;
+      background-color: #6b6bff;
+      animation-duration: 12s;
+    }
+
+    .balloon:nth-child(4) {
+      left: 60%;
+      background-color: #ff6bff;
+      animation-duration: 9s;
+    }
+
+    .balloon:nth-child(5) {
+      left: 80%;
+      background-color: #ffcc6b;
+      animation-duration: 11s;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: -10%;
+        opacity: 1;
+      }
+      100% {
+        bottom: 110%;
+        opacity: 0;
+      }
+    }
+  </style>
 </head>
 <body>
   <div class="container">
     <img src="images/romantic.gif" alt="Romantic GIF" class="image">
-    <h1>YAYYYYYYY MY BABY I LOVE YOU</h1>
+    <h1>YAYYYYY MY BABY THANK YOU</h1>
+    <h2>You make my heart flutter :)</h2>
   </div>
+
+  <!-- Balloons -->
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
+  <div class="balloon"></div>
 </body>
 </html>
