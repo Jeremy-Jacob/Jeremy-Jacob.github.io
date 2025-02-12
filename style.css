@@ -1,32 +1,36 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #ffebf0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    text-align: center;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  
-  h1 {
-    color: #d6336c;
-    font-size: 2rem;
-  }
+  font-family: Arial, sans-serif;
+  background-color: #ffebf0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Hide overflowing balloons */
+}
+
+.container {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1; /* Ensure content is above balloons */
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+h1 {
+  color: #d6336c;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
 h2 {
   color: #ff6b6b; /* A lighter shade of red for contrast */
