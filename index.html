@@ -15,6 +15,19 @@
       <button onclick="redirectToNo()">No</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    // Set a session storage flag to indicate the user has started
+    sessionStorage.setItem('started', 'true');
+
+    // Function to redirect to the "Yes" page
+    function redirectToYes() {
+      window.location.href = "yes-page.html";
+    }
+
+    // Function to redirect to the "No" page
+    function redirectToNo() {
+      window.location.href = "no-page.html";
+    }
+  </script>
 </body>
 </html>

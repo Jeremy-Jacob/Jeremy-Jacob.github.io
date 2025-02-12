@@ -9,12 +9,27 @@
 <body>
   <div class="container">
     <img src="images/cry.gif" alt="Funny GIF" class="image">
-    <h1>WHAT??? YOU SAID NO?!?!? It was probably a misclick right?</h1>
+    <h1>WHAT YOU SAID NO?!?!?</h1>
     <div class="buttons">
       <button onclick="redirectToYes()">Yes</button>
       <button onclick="redirectToNo()">No</button>
     </div>
   </div>
-  <script src="script.js"></script>
+  <script>
+    // Check if the user has started the interaction
+    if (!sessionStorage.getItem('started')) {
+      window.location.href = "index.html";
+    }
+
+    // Function to redirect to the "Yes" page
+    function redirectToYes() {
+      window.location.href = "yes-page.html";
+    }
+
+    // Function to redirect to the next "No" page
+    function redirectToNo() {
+      window.location.href = "no-page-2.html";
+    }
+  </script>
 </body>
 </html>
